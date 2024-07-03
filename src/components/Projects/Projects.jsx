@@ -62,6 +62,7 @@ function Projects() {
                                         />
                                 ))}
                         </div>
+                        <h3>Many more on github...!</h3>
                 </section>
         )
 }
