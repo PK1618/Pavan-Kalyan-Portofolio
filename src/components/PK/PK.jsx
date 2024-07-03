@@ -1,5 +1,5 @@
 import styles from './PKStyles.module.css';
-import pkImg from '../../assets/Pavan.png';
+import pkImg from '../../assets/PavanKalyan_1.png';
 import sun from '../../assets/sun.svg';
 import moon from '../../assets/moon.svg';
 import twitterIconLight from '../../assets/twitter-light.svg';
