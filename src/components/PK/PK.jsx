@@ -24,7 +24,7 @@ function PK() {
                                 <img className={styles.colorMode} src={themeIcon} alt="Color mode icon" onClick={toggleTheme} />
                         </div>
                         <div className={styles.info}>
-                                <h1>Satya Pavan Kalyan<br />Gude</h1>
+                                <h1>Hi,<br />Pavan Kalyan here!👋</h1>
                                 <h2>Frontend Developer || Data Scientist/Data Analyst</h2>
                                 <span>
                                         <a href="https://x.com/g_s_pavankalyan" target='_blank'>

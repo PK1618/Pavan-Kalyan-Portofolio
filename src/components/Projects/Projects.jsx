@@ -6,6 +6,7 @@ import CC from '../../assets/CervicalCancer.png'
 import Youtube from '../../assets/YoutubeSpam.png'
 import BurgerBuilder from '../../assets/burger_logo.png'
 import Titanic from '../../assets/titanicImg.jpg'
+import HeartStroke from '../../assets/heartStroke.jpg'
 import ProjectCard from '../../common/ProjectCard'
 
 const projectData = {
@@ -36,15 +37,15 @@ const projectData = {
                         link: "https://github.com/PK1618/DeepLearing/blob/main/youtube_spam_comments.ipynb",
                         alt: 'Youtube Spam',
                         h3: 'Youtube Spam Comments Classification',
-                        p: 'Identifying Youtube Spam '
+                        p: 'Identifying Youtube Spam'
+                },
+                {
+                        src: HeartStroke,
+                        link: "https://github.com/PK1618/AI_Final_Project",
+                        alt: 'HS',
+                        h3: 'Heart Stroke Prediction',
+                        p: 'Check Whether you will get stroke or not!'
                 }
-                // {
-                //         src: Youtube,
-                //         link: "https://github.com/PK1618/DeepLearing/blob/main/youtube_spam_comments.ipynb",
-                //         alt: 'Youtube Spam',
-                //         h3: 'Youtube Spam Comments Classification',
-                //         p: 'Identifying Youtube Spam '
-                // }
         ],
         frontend: [
                 {
