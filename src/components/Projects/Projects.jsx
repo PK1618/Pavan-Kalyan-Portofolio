@@ -37,14 +37,14 @@ const projectData = {
                         alt: 'Youtube Spam',
                         h3: 'Youtube Spam Comments Classification',
                         p: 'Identifying Youtube Spam '
-                },
-                {
-                        src: Youtube,
-                        link: "https://github.com/PK1618/DeepLearing/blob/main/youtube_spam_comments.ipynb",
-                        alt: 'Youtube Spam',
-                        h3: 'Youtube Spam Comments Classification',
-                        p: 'Identifying Youtube Spam '
                 }
+                // {
+                //         src: Youtube,
+                //         link: "https://github.com/PK1618/DeepLearing/blob/main/youtube_spam_comments.ipynb",
+                //         alt: 'Youtube Spam',
+                //         h3: 'Youtube Spam Comments Classification',
+                //         p: 'Identifying Youtube Spam '
+                // }
         ],
         frontend: [
                 {
