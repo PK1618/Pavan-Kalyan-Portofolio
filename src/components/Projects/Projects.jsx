@@ -1,10 +1,11 @@
 import React, { useState, useRef } from 'react'
 import styles from './ProjectsStyles.module.css'
-import WebTraffic from '../../assets/Web_Traffic_Analysis.png'
-import EG from '../../assets/InterpretableAI.png'
+// import WebTraffic from '../../assets/Web_Traffic_Analysis.png'
+import WebTraffic from '../../assets/WebsiteTraffic.jpg'
+import EG from '../../assets/HumanExpress.jpg'
 import CC from '../../assets/CervicalCancer.png'
-import Youtube from '../../assets/YoutubeSpam.png'
-import BurgerBuilder from '../../assets/burger_logo.png'
+import Youtube from '../../assets/spam.jpg'
+import BurgerBuilder from '../../assets/Burger.png'
 import Titanic from '../../assets/titanicImg.jpg'
 import HeartStroke from '../../assets/heartStroke.jpg'
 import ProjectCard from '../../common/ProjectCard'
@@ -61,7 +62,7 @@ const projectData = {
                         src: Titanic,
                         link: "https://public.tableau.com/views/TitanicDataset_17210125571410/Dashboard2?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
                         alt: 'Titanic dashboard',
-                        h3: 'Check out Titanic Data Analysis',
+                        h3: 'Check out Titanic Data Analysis!!',
                         p: ''
 
                 }
@@ -70,6 +71,7 @@ const projectData = {
 }
 
 function Projects() {
+
         const [activeTab, setActiveTab] = useState('mlDl')
         const scrollContainerRef = useRef(null)
 
@@ -80,6 +82,10 @@ function Projects() {
                         container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' })
                 }
         }
+
+        const activeProjects = projectData[activeTab]
+        const showScrollButtons = activeProjects.length > 4
+
         return (
                 <section id='projects' className={styles.container}>
                         <h1>PROJECTS</h1>
@@ -88,10 +94,12 @@ function Projects() {
                                 <button onClick={() => setActiveTab('frontend')} className={activeTab === 'frontend' ? styles.active : ''}>Frontend</button>
                                 <button onClick={() => setActiveTab('tableau')} className={activeTab === 'tableau' ? styles.active : ''}>Tableau</button>
                         </div>
-                        <div className={styles.projectsWrapper}>
-                                <button className={styles.scrollButton} onClick={() => scroll(-1)}>&lt;</button>
-                                <div className={styles.projectsContainer} ref={scrollContainerRef}>
-                                        {projectData[activeTab].map((card, index) => (
+                        <div className={`${styles.projectsWrapper} ${!showScrollButtons ? styles.centerFew : ''}`}>
+                                {showScrollButtons && (
+                                        <button className={styles.scrollButton} onClick={() => scroll(-1)}>&lt;</button>
+                                )}
+                                <div className={`${styles.projectsContainer} ${!showScrollButtons ? styles.centerFew : ''}`} ref={scrollContainerRef}>
+                                        {activeProjects.map((card, index) => (
                                                 <ProjectCard
                                                         key={index}
                                                         src={card.src}
@@ -102,7 +110,9 @@ function Projects() {
                                                 />
                                         ))}
                                 </div>
-                                <button className={styles.scrollButton} onClick={() => scroll(1)}>&gt;</button>
+                                {showScrollButtons && (
+                                        <button className={styles.scrollButton} onClick={() => scroll(1)}>&gt;</button>
+                                )}
                         </div>
                         <h3>Many more on github...!</h3>
                 </section>
