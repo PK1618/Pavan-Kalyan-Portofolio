@@ -17,35 +17,40 @@ const projectData = {
                         link: "https://github.com/PK1618/DeepLearing/blob/main/Surfing%20the%20Waves%20of%20Data%2C%20Web%20Traffic%20Analysis%20and%20Anamoly%20Detection.ipynb",
                         alt: 'WebTraffic',
                         h3: 'Web Traffic Analysis',
-                        p: 'Project on Wikipedia pages'
+                        p: 'Project on Wikipedia pages',
+                        hoverText: 'Analyzed web traffic to detect anomalies and predict future trends using advanced time series forecasting techniques. Utilizing historical data, the project aims to enhance the accuracy of traffic prediction and identify unusual patterns.'
                 },
                 {
                         src: EG,
                         link: "https://github.com/PK1618/Interpretability_of_ML/blob/main/EmotionANDGender.ipynb",
                         alt: 'Interpretable AI',
                         h3: 'Training AI to Decipher Human Expressions!',
-                        p: 'Project on Images'
+                        p: 'Project on Images',
+                        hoverText: 'Implemented emotion and gender recognition using deep learning models to enhance interpretability and transparency. The project integrates Local Interpretable Model-agnostic Explanations (LIME) and Grad-CAM techniques.'
                 },
                 {
                         src: CC,
                         link: "https://github.com/PK1618/DeepLearing/blob/main/cervical_cancer.ipynb",
                         alt: 'CervicalCancer',
                         h3: 'Cervical Cancer Classification',
-                        p: 'Project on Cervical Cancer patients data'
+                        p: 'Project on Cervical Cancer patients data',
+                        hoverText: 'Developed a predictive model for cervical cancer diagnosis using machine learning techniques. The project focuses on identifying key risk factors and improving early detection accuracy.'
                 },
                 {
                         src: Youtube,
                         link: "https://github.com/PK1618/DeepLearing/blob/main/youtube_spam_comments.ipynb",
                         alt: 'Youtube Spam',
                         h3: 'Youtube Spam Comments Classification',
-                        p: 'Identifying Youtube Spam'
+                        p: 'Identifying Youtube Spam',
+                        hoverText: 'Created a machine learning model to detect spam comments on YouTube videos. The project aims to enhance user experience by accurately filtering out spam content.'
                 },
                 {
                         src: HeartStroke,
                         link: "https://github.com/PK1618/AI_Final_Project",
                         alt: 'HS',
                         h3: 'Heart Stroke Prediction',
-                        p: 'Check Whether you will get stroke or not!'
+                        p: 'Check Whether you will get stroke or not!',
+                        hoverText: 'Building a predictive model to assess stroke risk using patient health data. The project focuses on early identification of high-risk individuals to improve preventive care and outcomes(web integrated using streamlit coming soon!).'
                 }
         ],
         frontend: [
@@ -54,7 +59,8 @@ const projectData = {
                         link: "https://react-my-burger-ec04f.web.app/",
                         alt: 'Burger',
                         h3: 'Build your burger',
-                        p: 'Make your own :)'
+                        p: 'Make your own :)',
+                        hoverText: 'Developed a dynamic burger builder application using ReactJS, allowing users to customize and order their burgers. The project emphasizes responsive design, user-friendly interface, and seamless integration with backend services.'
                 }
         ],
         tableau: [
@@ -63,7 +69,8 @@ const projectData = {
                         link: "https://public.tableau.com/views/TitanicDataset_17210125571410/Dashboard2?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
                         alt: 'Titanic dashboard',
                         h3: 'Check out Titanic Data Analysis!!',
-                        p: ''
+                        p: '',
+                        hoverText: 'Created an interactive Tableau dashboard for the Titanic dataset to visualize passenger survival rates, and other key insights. The dashboard allows users to explore relationships between variables and identify trends effectively.'
 
                 }
 
@@ -107,6 +114,7 @@ function Projects() {
                                                         alt={card.alt}
                                                         h3={card.h3}
                                                         p={card.p}
+                                                        hoverText={card.hoverText}
                                                 />
                                         ))}
                                 </div>

@@ -3,23 +3,23 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding: 20px;
+        /* padding: 20px; */
         background-color: transparent;
     }
     
-    .container h1 {
+.container h1 {
         margin-bottom: 30px;
         font-size: 2.5rem;
         color: var(--text-primary); /* Use a CSS variable for text color */
     }
     
-    .tabs {
+.tabs {
         display: flex;
         justify-content: center;
         margin-bottom: 30px;
     }
     
-    .tabs button {
+.tabs button {
         padding: 10px 20px;
         margin: 0 5px;
         border: none;
@@ -33,18 +33,18 @@
         box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
     
-    .tabs button:hover {
+.tabs button:hover {
         background-color: var(--button-hover-bg, #444);
         transform: translateY(-2px);
     }
     
-    .tabs button.active {
+.tabs button.active {
         background-color: var(--button-active-bg, #007bff);
         box-shadow: 0 4px 8px rgba(0,123,255,0.3);
         color: white;
     }
     
-    .projectsWrapper {
+.projectsWrapper {
         position: relative;
         width: 100%;
         max-width: 1200px;
@@ -52,13 +52,13 @@
         padding: 0 50px;
     }
     
-    .projectsWrapper.centerFew {
+.projectsWrapper.centerFew {
         display: flex;
         justify-content: center;
         padding: 0;
     }
     
-    .projectsContainer {
+.projectsContainer {
         display: flex;
         overflow-x: auto;
         scroll-behavior: smooth;
@@ -68,18 +68,18 @@
         -ms-overflow-style: none;
     }
     
-    .projectsContainer.centerSingle {
+.projectsContainer.centerSingle {
         justify-content: center;
         flex-wrap: wrap;
         overflow-x: visible;
     }
     
-    .projectsContainer::-webkit-scrollbar {
+.projectsContainer::-webkit-scrollbar {
         width: 0;
         height: 0;
     }
     
-    .scrollButton {
+.scrollButton {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -98,19 +98,19 @@
         transition: background-color 0.3s ease;
     }
     
-    .scrollButton:hover {
+.scrollButton:hover {
         background-color: var(--scroll-button-hover-bg, rgba(0, 0, 0, 0.7));
     }
     
-    .scrollButton:first-child {
+.scrollButton:first-child {
         left: 0;
     }
     
-    .scrollButton:last-child {
+.scrollButton:last-child {
         right: 0;
     }
     
-    .projectCard {
+.projectCard {
         flex: 0 0 auto;
         width: 250px;
         background-color: var(--card-bg, rgba(255, 255, 255, 0.1));
@@ -125,18 +125,18 @@
         padding-bottom: 20px;
     }
     
-    .projectCard:hover {
+.projectCard:hover {
         transform: scale(1.05);
     }
     
-    .projectCard img {
+.projectCard img {
         width: 100%;
         height: 200px;
         object-fit: cover;
         border-radius: 10px 10px 0 0;
     }
     
-    .projectCard .content {
+.projectCard .content {
         padding: 15px;
         flex-grow: 1;
         display: flex;
@@ -144,28 +144,70 @@
         justify-content: space-between;
     }
     
-    .projectCard h3 {
+.projectCard h3 {
         margin: 0 0 10px 0;
         font-size: 18px;
         line-height: 1.2;
         color: var(--card-title, black);
     }
     
-    .projectCard p {
+.projectCard p {
         margin: 0;
         font-size: 14px;
         color: var(--card-description, #333);
         line-height: 1.4;
     }
     
-    .container h3 {
+.container h3 {
         margin-top: 20px;
         font-size: 1.2rem;
         color: var(--text-secondary, #666);
     }
+
+.imageContainer {
+        position: relative;
+        overflow: hidden;
+      }
+      
+.imageContainer img {
+        transition: transform 0.3s ease;
+      }
+      
+.overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        align-items: flex-start; 
+        justify-content: flex-start;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        padding: 10px;
+      }
+      
+.overlay p {
+        color: white;
+        text-align: left; 
+        font-size: 14px;
+        line-height: 1.4;
+        margin: 0;
+        font-family: "Caudex", serif;
+        font-style: normal;
+      }
+      
+.projectCard:hover .imageContainer img {
+        transform: scale(1.1);
+      }
+      
+.projectCard:hover .overlay {
+        opacity: 1;
+      }
     
 
-    @media (max-width: 800px) {
+@media (max-width: 800px) {
         .projectsWrapper {
             padding: 20px;
         }

@@ -37,7 +37,7 @@ function PK() {
                                                 <img src={linkedInIcon} alt="LinkedIn Icon" />
                                         </a>
                                 </span>
-                                <p className={styles.description}>With a experience of building modern React Web Apps. A Data Analytics and Data Science enthusiast.</p>
+                                <p className={styles.description}>Enthusiastic about developing machine learning and deep learning models, with a keen interest in data analysis and visualization. Experienced in creating dynamic and responsive web applications using ReactJS. Passionate about leveraging data to uncover insights and drive decision-making.</p>
                                 <a href={CV} download>
                                         <button className='hover'>
                                                 Resume

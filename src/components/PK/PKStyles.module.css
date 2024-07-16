@@ -68,8 +68,12 @@
 }
 
 .description {
-        max-width: 24ch;
+        max-width: 70ch;
         align-self: center;
+        font-family: 'Space Grotesk', sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 200;
+        font-style: normal;
 }
 
 .info {
@@ -115,6 +119,7 @@
 
 @media (width >=1400px) {
         .container {
+
                 .pk {
                         max-width: 400px;
                         width: 400px;
