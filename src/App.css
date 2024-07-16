@@ -1,4 +1,17 @@
 :root {
+        --text-primary: #333;
+        --text-secondary: #666;
+        --button-bg: #e0e0e0;
+        --button-text: #333;
+        --button-hover-bg: #d0d0d0;
+        --button-active-bg: #007bff;
+        --scroll-button-bg: rgba(0, 0, 0, 0.5);
+        --scroll-button-text: white;
+        --scroll-button-hover-bg: rgba(0, 0, 0, 0.7);
+        --card-bg: white;
+        --card-text: black;
+        --card-title: black;
+        --card-description: #333;
         --background-color: #fff;
         --btn-color: #0987f2;
         --btn-text-color: #fff;
@@ -16,6 +29,19 @@
         --text-color: #fff;
         --form-text-color: #fff;
         --footer-text-color: #bbb;
+        --text-primary: #fff;
+        --text-secondary: #ccc;
+        --button-bg: #333;
+        --button-text: white;
+        --button-hover-bg: #444;
+        --button-active-bg: #007bff;
+        --scroll-button-bg: rgba(255, 255, 255, 0.5);
+        --scroll-button-text: black;
+        --scroll-button-hover-bg: rgba(255, 255, 255, 0.7);
+        --card-bg: #2a2a2a;
+        --card-text: white;
+        --card-title: white;
+        --card-description: #ccc;
 }
 
 body {
