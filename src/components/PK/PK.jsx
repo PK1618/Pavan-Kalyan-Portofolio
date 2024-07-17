@@ -18,7 +18,7 @@ function PK() {
         const githubIcon = theme === 'light' ? githubIconLight : githubIconDark;
         const linkedInIcon = theme === 'light' ? linkedInIconLight : linkedInIconDark;
         return (
-                <section id='pk' className={styles.container}>
+                <section id='pk' className={`${styles.container} sectionContainer`}>
                         <div className={styles.colorContainer}>
                                 <img className={styles.pk} src={pkImg} alt="Profile Picture of Pavan Kalyan" />
                                 <img className={styles.colorMode} src={themeIcon} alt="Color mode icon" onClick={toggleTheme} />

@@ -1,101 +1,159 @@
 .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         text-align: center;
-        /* padding: 20px; */
-        background-color: transparent;
-    }
-    
-.container h1 {
-        margin-bottom: 30px;
-        font-size: 2.5rem;
-        color: var(--text-primary); /* Use a CSS variable for text color */
-    }
-    
-.tabs {
+      }
+      
+      .tabs {
         display: flex;
         justify-content: center;
-        margin-bottom: 30px;
-    }
-    
-.tabs button {
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 30px 0;
+        width: 100%;
+      }
+      
+      .tabs button {
         padding: 10px 20px;
-        margin: 0 5px;
         border: none;
-        background-color: var(--button-bg, #333);
-        color: var(--button-text, white);
+        background-color: var(--button-bg);
+        color: var(--button-text);
         cursor: pointer;
         transition: all 0.3s ease;
         border-radius: 20px;
         font-weight: bold;
         text-transform: uppercase;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-    
-.tabs button:hover {
-        background-color: var(--button-hover-bg, #444);
-        transform: translateY(-2px);
-    }
-    
-.tabs button.active {
-        background-color: var(--button-active-bg, #007bff);
-        box-shadow: 0 4px 8px rgba(0,123,255,0.3);
+      }
+      
+      .tabs button:hover {
+        background-color: var(--button-hover-bg);
+      }
+      
+      .tabs button.active {
+        background-color: var(--button-active-bg);
         color: white;
-    }
-    
-.projectsWrapper {
+      }
+      
+      .projectsWrapper {
         position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+      }
+      
+      .projectsContainer {
+        display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 20px 0;
+  gap: 20px;
+  width: 100%;
+      }
+      .projectsContainer::-webkit-scrollbar {
+        display: none; /* WebKit */
+      }
+      
+      .projectCard {
+        flex: 0 0 auto;
+  width: 250px;
+  max-width: 100%;
+  height: 350px;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  color: var(--card-text);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      
+      .projectCard:hover {
+        transform: scale(1.05);
+      }
+      
+      .projectCard img {
         width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 50px;
-    }
-    
-.projectsWrapper.centerFew {
+        height: 200px;
+        object-fit: cover;
+      }
+      
+      .projectCard .content {
+        padding: 15px;
+        flex-grow: 1;
         display: flex;
-        justify-content: center;
-        padding: 0;
-    }
-    
-.projectsContainer {
-        display: flex;
-        overflow-x: auto;
-        scroll-behavior: smooth;
-        padding: 20px;
-        gap: 20px;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-    }
-    
-.projectsContainer.centerSingle {
-        justify-content: center;
-        flex-wrap: wrap;
-        overflow-x: visible;
-    }
-    
-.projectsContainer::-webkit-scrollbar {
-        width: 0;
-        height: 0;
-    }
-    
-.scrollButton {
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      
+      .projectCard h3 {
+        margin: 0 0 10px 0;
+        font-size: 18px;
+        color: var(--card-title);
+      }
+      
+      .projectCard p {
+        margin: 0;
+        font-size: 14px;
+        color: var(--card-description);
+      }
+      
+      .imageContainer {
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .overlay {
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: var(--scroll-button-bg, rgba(0, 0, 0, 0.5));
-        color: var(--scroll-button-text, white);
-        border: none;
-        cursor: pointer;
-        z-index: 10;
-        border-radius: 50%;
-        font-size: 24px;
-        width: 40px;
-        height: 40px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.8);
         display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: background-color 0.3s ease;
+        align-items: flex-start;
+        justify-content: flex-start;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        padding: 10px;
+      }
+      
+      .overlay p {
+        color: white;
+        text-align: left;
+        font-size: 14px;
+        line-height: 1.4;
+        margin: 0;
+      }
+      
+      .projectCard:hover .imageContainer img {
+        transform: scale(1.1);
+      }
+      
+      .projectCard:hover .overlay {
+        opacity: 1;
+      }
+
+      .scrollButton {
+        position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--scroll-button-bg, rgba(0, 0, 0, 0.5));
+  color: var(--scroll-button-text, white);
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
     }
     
 .scrollButton:hover {
@@ -109,124 +167,27 @@
 .scrollButton:last-child {
         right: 0;
     }
-    
-.projectCard {
-        flex: 0 0 auto;
-        width: 250px;
-        background-color: var(--card-bg, rgba(255, 255, 255, 0.1));
-        border-radius: 10px;
-        overflow: hidden;
-        transition: transform 0.3s ease;
-        text-decoration: none;
-        color: var(--card-text, black);
-        display: flex;
-        flex-direction: column;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        padding-bottom: 20px;
-    }
-    
-.projectCard:hover {
-        transform: scale(1.05);
-    }
-    
-.projectCard img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 10px 10px 0 0;
-    }
-    
-.projectCard .content {
-        padding: 15px;
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    
-.projectCard h3 {
-        margin: 0 0 10px 0;
-        font-size: 18px;
-        line-height: 1.2;
-        color: var(--card-title, black);
-    }
-    
-.projectCard p {
-        margin: 0;
-        font-size: 14px;
-        color: var(--card-description, #333);
-        line-height: 1.4;
-    }
-    
-.container h3 {
-        margin-top: 20px;
-        font-size: 1.2rem;
-        color: var(--text-secondary, #666);
-    }
 
-.imageContainer {
-        position: relative;
-        overflow: hidden;
-      }
       
-.imageContainer img {
-        transition: transform 0.3s ease;
-      }
-      
-.overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.8);
-        display: flex;
-        align-items: flex-start; 
-        justify-content: flex-start;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        padding: 10px;
-      }
-      
-.overlay p {
-        color: white;
-        text-align: left; 
-        font-size: 14px;
-        line-height: 1.4;
-        margin: 0;
-        font-family: "Caudex", serif;
-        font-style: normal;
-      }
-      
-.projectCard:hover .imageContainer img {
-        transform: scale(1.1);
-      }
-      
-.projectCard:hover .overlay {
-        opacity: 1;
-      }
-    
-
-@media (max-width: 800px) {
-        .projectsWrapper {
-            padding: 20px;
-        }
-    
-        .projectsWrapper.centerSingle {
-            padding: 0;
-        }
-    
-        .projectsContainer {
-            flex-direction: column;
-            align-items: center;
-        }
-    
+      @media (max-width: 768px) {
         .projectCard {
-            width: 80%;
-            margin: 10px 0;
+          width: 100%;
+          max-width: 300px;
         }
-    
+      
+        .tabs button {
+          flex: 1 1 auto;
+        }
         .scrollButton {
-            display: none;
-        }
-    }
+                display: none;
+            }
+        .singleItem {
+                justify-content: center;
+              }
+      }
+
+      @media (min-width: 720px){
+        .fewItems{
+                justify-content: center;
+              }
+      }

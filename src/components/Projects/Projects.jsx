@@ -92,20 +92,22 @@ function Projects() {
 
         const activeProjects = projectData[activeTab]
         const showScrollButtons = activeProjects.length > 4
+        const isSingleItem = activeProjects.length === 1
+        const isDesktopItems = activeProjects.length < 4
 
         return (
-                <section id='projects' className={styles.container}>
+                <section id='projects' className={`${styles.container} sectionContainer`}>
                         <h1>PROJECTS</h1>
                         <div className={styles.tabs}>
                                 <button onClick={() => setActiveTab('mlDl')} className={activeTab === 'mlDl' ? styles.active : ''}>ML/DL</button>
                                 <button onClick={() => setActiveTab('frontend')} className={activeTab === 'frontend' ? styles.active : ''}>Frontend</button>
                                 <button onClick={() => setActiveTab('tableau')} className={activeTab === 'tableau' ? styles.active : ''}>Tableau</button>
                         </div>
-                        <div className={`${styles.projectsWrapper} ${!showScrollButtons ? styles.centerFew : ''}`}>
+                        <div className={styles.projectsWrapper}>
                                 {showScrollButtons && (
                                         <button className={styles.scrollButton} onClick={() => scroll(-1)}>&lt;</button>
                                 )}
-                                <div className={`${styles.projectsContainer} ${!showScrollButtons ? styles.centerFew : ''}`} ref={scrollContainerRef}>
+                                <div className={`${styles.projectsContainer} ${isSingleItem ? styles.singleItem : ''} ${isDesktopItems ? styles.fewItems : ''}`} ref={scrollContainerRef}>
                                         {activeProjects.map((card, index) => (
                                                 <ProjectCard
                                                         key={index}

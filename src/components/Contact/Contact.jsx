@@ -3,7 +3,7 @@ import styles from './ContactStyles.module.css'
 
 function Contact() {
         return (
-                <section id="contact" className={styles.container}>
+                <section id="contact" className={`${styles.container} sectionContainer`}>
                         <h1 className='sectionTitle'>CONTACT</h1>
                         <span>
                                 <p>Phone No: +1 (314) 648-5297</p>

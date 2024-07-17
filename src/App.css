@@ -19,9 +19,9 @@
         --text-color: #222;
         --form-text-color: #555;
         --footer-text-color: #888;
-}
-
-[data-theme='dark'] {
+      }
+      
+      [data-theme='dark'] {
         --background-color: #222;
         --btn-color: #fff;
         --btn-text-color: #222;
@@ -42,74 +42,78 @@
         --card-text: white;
         --card-title: white;
         --card-description: #ccc;
-}
-
-body {
+      }
+      
+      body {
         background-color: var(--background-color);
-        display: flex;
-        justify-content: center;
-        margin: 0 auto 60px;
-}
-
-#root {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto mono', monospace;
+      }
+      
+      #root {
         display: flex;
         flex-direction: column;
         gap: 60px;
-}
-
-h1,
-h2,
-h3,
-p {
+        width: 100%;
+        max-width: 1400px;
+        margin: 20px 0;
+        padding: 0 20px;
+        box-sizing: border-box;
+      }
+      
+      h1, h2, h3, p {
         color: var(--text-color);
         margin: 0;
         padding: 0;
-}
-
-h2,
-h3,
-p {
-        font-family: 'Roboto mono', monospace;
-}
-
-
-h2 {
-        text-transform: uppercase;
-}
-
-h2,
-h3 {
-        font-size: 20px;
-}
-
-h1 {
+      }
+      
+      h1 {
         font-family: 'Space Grotesk', sans-serif;
         font-size: 32px;
-}
-
-p {
+      }
+      
+      h2, h3 {
+        font-size: 20px;
+      }
+      
+      p {
         font-size: 16px;
         font-weight: 300;
-}
-
-.sectionTitle {
-        margin-bottom: 30px;
-}
-
-.hover {
+      }
+      
+      .sectionContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        box-sizing: border-box;
+      }
+      
+      .sectionTitle {
+        font-size: 32px;
+        /* margin-bottom: 20px; */
+        text-align: center;
+        width: 100%;
+      }
+      
+      .hover {
         cursor: pointer;
-}
-
-@media(width >=1400) {
+      }
+      
+      @media (width >= 1285px) {
         #root {
-                gap: 200px;
+                margin: 0 auto;
         }
-
-        h1 {
-                font-size: 48px;
+      
+        h1, .sectionTitle {
+          font-size: 48px;
         }
-
+      
         .sectionTitle {
-                margin-bottom: 75px;
+          margin-bottom: 35px;
         }
-}
+      }

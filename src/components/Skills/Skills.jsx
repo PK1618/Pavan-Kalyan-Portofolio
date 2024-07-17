@@ -11,7 +11,7 @@ function Skills() {
         const checkMark = theme === 'light' ? checkMarkLight : checkMarkDark;
 
         return (
-                <section id="skills" className={styles.container}>
+                <section id="skills" className={`${styles.container} sectionContainer`}>
                         <h1 className="sectionTitle">SKILLS</h1>
                         <div className={styles.skillList}>
                                 <SkillsList src={checkMark} skill='Java' />
