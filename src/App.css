@@ -58,7 +58,7 @@
         width: 100%;
         max-width: 1400px;
         margin: 20px 0;
-        padding: 0 20px;
+        padding: 20px 20px;
         box-sizing: border-box;
       }
       
@@ -102,6 +102,17 @@
       
       .hover {
         cursor: pointer;
+      }
+
+      .reveal-wrapper {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      
+      .reveal-wrapper.reveal {
+        opacity: 1;
+        transform: translateY(0);
       }
       
       @media (width >= 1285px) {

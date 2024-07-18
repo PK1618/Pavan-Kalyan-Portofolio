@@ -60,6 +60,11 @@ input[type='submit']:active {
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
 }
 
+@media (max-width: 780px){
+        h1{
+                padding-bottom: 30px;
+        }
+}
 @media (width >=800px) {
 
         textarea,

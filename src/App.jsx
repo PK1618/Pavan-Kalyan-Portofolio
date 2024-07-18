@@ -4,16 +4,31 @@ import PK from './components/PK/PK'
 import Projects from './components/Projects/Projects'
 import Skills from './components/Skills/Skills'
 import Footer from './components/Footer/Footer'
+import RevealOnScroll from './RevealOnScroll'
 
 function App() {
 
         return (
                 <>
-                        <PK />
-                        <Projects />
-                        <Skills />
-                        <Contact />
-                        <Footer />
+                        <RevealOnScroll>
+                                <PK />
+                        </RevealOnScroll>
+
+                        <RevealOnScroll>
+                                <Projects />
+                        </RevealOnScroll>
+
+                        <RevealOnScroll>
+                                <Skills />
+                        </RevealOnScroll>
+
+                        <RevealOnScroll>
+                                <Contact />
+                        </RevealOnScroll>
+
+                        <RevealOnScroll>
+                                <Footer />
+                        </RevealOnScroll>
                 </>
         )
 }

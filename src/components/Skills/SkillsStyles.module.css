@@ -45,3 +45,8 @@ hr {
                 width: 300px;
         }
 }
+@media (max-width: 780px){
+        h1{
+                padding-bottom: 30px;
+        }
+}
