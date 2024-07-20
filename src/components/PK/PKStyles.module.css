@@ -82,7 +82,12 @@
         gap: 20px;
 }
 
-.text{
+.inlineText {
+        display: inline-flex;
+        align-items: center;
+}
+
+.text {
         font-size: 5em;
         letter-spacing: 10px;
         font-family: 'Space Grotesk', sans-serif;
@@ -91,17 +96,45 @@
         width: 100%;
         white-space: nowrap;
         overflow: hidden;
-        animation: 
+        animation:
                 typing 2s steps(15),
                 cursor .4s step-end infinite alternate;
 }
 
-@keyframes cursor { 
-        50% { border-color: transparent }
+@keyframes shake {
+
+        0%,
+        100% {
+                transform: rotate(0deg);
+        }
+
+        25% {
+                transform: rotate(10deg);
+        }
+
+        50% {
+                transform: rotate(-10deg);
+        }
+
+        75% {
+                transform: rotate(10deg);
+        }
 }
 
-@keyframes typing{
-        from {width: 0}
+.shake:hover {
+        animation: shake 0.5s ease-in-out infinite;
+}
+
+@keyframes cursor {
+        50% {
+                border-color: transparent
+        }
+}
+
+@keyframes typing {
+        from {
+                width: 0
+        }
 }
 
 @media (width >=800px) {
