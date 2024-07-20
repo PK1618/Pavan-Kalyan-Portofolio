@@ -57,8 +57,8 @@ body {
         gap: 60px;
         width: 100%;
         max-width: 1400px;
-        /* margin: 20px 0; */
         padding: 20px 20px;
+        margin: 50px 0;
         box-sizing: border-box;
 }
 
@@ -171,5 +171,11 @@ p {
 
         .sectionTitle {
                 margin-bottom: 35px;
+        }
+}
+
+@media (min-width: 768px) {
+        #root {
+                margin: 0 auto;
         }
 }
