@@ -9,6 +9,7 @@ import BurgerBuilder from '../../assets/Burger.png'
 import Titanic from '../../assets/titanicImg.jpg'
 import HeartStroke from '../../assets/heartStroke.jpg'
 import ProjectCard from '../../common/ProjectCard'
+import AiImageGen from '../../assets/AiImage.webp'
 
 const projectData = {
         mlDl: [
@@ -58,9 +59,17 @@ const projectData = {
                         src: BurgerBuilder,
                         link: "https://react-my-burger-ec04f.web.app/",
                         alt: 'Burger',
-                        h3: 'Build your burger',
+                        h3: 'Build and Order your burger',
                         p: 'Make your own :)',
                         hoverText: 'Developed a dynamic burger builder application using ReactJS, allowing users to customize and order their burgers. The project emphasizes responsive design, user-friendly interface, and seamless integration with backend services.'
+                },
+                {
+                        src: AiImageGen,
+                        link: "https://aiimagecheymowa.netlify.app/",
+                        alt: 'AIImageGen',
+                        h3: 'Generate your thoughts and share with community',
+                        p: 'Do fun work',
+                        hoverText: 'Experience the power of AI with our image generator, built using React, Express, Node.js, TailwindCSS, MongoDB, and OpenAI’s API, seamlessly integrating CORS and Cloudinary for dynamic creativity.'
                 }
         ],
         tableau: [
