@@ -28,7 +28,7 @@ function PK() {
                                 <h1>
                                         Hi,<br /> Pavan Kalyan here!👋
                                 </h1>
-                                <h2>Frontend Developer || Data Scientist/Data Analyst</h2>
+                                <h2>Passionate Full Stack Developer | Data Enthusiast | Machine Learning & Deep Learning Enthusiast</h2>
                                 <span>
                                         <a href="https://x.com/g_s_pavankalyan" target='_blank'>
                                                 <img src={twitterIcon} alt="Twitter Icon" />
@@ -40,7 +40,12 @@ function PK() {
                                                 <img src={linkedInIcon} alt="LinkedIn Icon" />
                                         </a>
                                 </span>
-                                <p className={styles.description}>Enthusiastic about developing machine learning and deep learning models, with a keen interest in data analysis and visualization. Experienced in creating dynamic and responsive web applications using ReactJS. Passionate about leveraging data to uncover insights and drive decision-making.</p>
+                                <p className={styles.description}>
+                                        I’m a Full Stack Developer skilled in HTML, CSS, JavaScript, React, Node.js, Express.js, MongoDB, and AWS, with a growing expertise in Next.js.
+                                        I specialize in creating dynamic, responsive web applications.
+                                        I’m also passionate about machine learning, deep learning, and data analysis, using data to uncover insights and drive decision-making.
+                                        I love tackling challenges and delivering impactful, tech-driven solutions.
+                                </p>
                                 <a href={CV} download>
                                         <button className='hover'>
                                                 Resume

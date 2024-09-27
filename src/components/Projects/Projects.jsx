@@ -12,6 +12,24 @@ import ProjectCard from '../../common/ProjectCard'
 import AiImageGen from '../../assets/AiImage.webp'
 
 const projectData = {
+        frontend: [
+                {
+                        src: BurgerBuilder,
+                        link: "https://react-my-burger-ec04f.web.app/",
+                        alt: 'Burger',
+                        h3: 'Build and Order your burger',
+                        p: 'Make your own :)',
+                        hoverText: 'Developed a dynamic burger builder application using ReactJS, allowing users to customize and order their burgers. The project emphasizes responsive design, user-friendly interface, and seamless integration with backend services.'
+                },
+                {
+                        src: AiImageGen,
+                        link: "https://aiimagecheymowa.netlify.app/",
+                        alt: 'AIImageGen',
+                        h3: 'Generate your thoughts and share with community',
+                        p: 'Do fun work',
+                        hoverText: 'Experience the power of AI with our image generator, built using React, Express, Node.js, TailwindCSS, MongoDB, and OpenAI’s API, seamlessly integrating CORS and Cloudinary for dynamic creativity.'
+                }
+        ],
         mlDl: [
                 {
                         src: WebTraffic,
@@ -54,24 +72,6 @@ const projectData = {
                         hoverText: 'Building a predictive model to assess stroke risk using patient health data. The project focuses on early identification of high-risk individuals to improve preventive care and outcomes(web integrated using streamlit coming soon!).'
                 }
         ],
-        frontend: [
-                {
-                        src: BurgerBuilder,
-                        link: "https://react-my-burger-ec04f.web.app/",
-                        alt: 'Burger',
-                        h3: 'Build and Order your burger',
-                        p: 'Make your own :)',
-                        hoverText: 'Developed a dynamic burger builder application using ReactJS, allowing users to customize and order their burgers. The project emphasizes responsive design, user-friendly interface, and seamless integration with backend services.'
-                },
-                {
-                        src: AiImageGen,
-                        link: "https://aiimagecheymowa.netlify.app/",
-                        alt: 'AIImageGen',
-                        h3: 'Generate your thoughts and share with community',
-                        p: 'Do fun work',
-                        hoverText: 'Experience the power of AI with our image generator, built using React, Express, Node.js, TailwindCSS, MongoDB, and OpenAI’s API, seamlessly integrating CORS and Cloudinary for dynamic creativity.'
-                }
-        ],
         tableau: [
                 {
                         src: Titanic,
@@ -88,7 +88,7 @@ const projectData = {
 
 function Projects() {
 
-        const [activeTab, setActiveTab] = useState('mlDl')
+        const [activeTab, setActiveTab] = useState('frontend')
         const scrollContainerRef = useRef(null)
 
         const scroll = (direction) => {
@@ -108,8 +108,8 @@ function Projects() {
                 <section id='projects' className={`${styles.container} sectionContainer`}>
                         <h1>PROJECTS</h1>
                         <div className={styles.tabs}>
-                                <button onClick={() => setActiveTab('mlDl')} className={activeTab === 'mlDl' ? styles.active : ''}>ML/DL</button>
                                 <button onClick={() => setActiveTab('frontend')} className={activeTab === 'frontend' ? styles.active : ''}>Frontend</button>
+                                <button onClick={() => setActiveTab('mlDl')} className={activeTab === 'mlDl' ? styles.active : ''}>ML/DL</button>
                                 <button onClick={() => setActiveTab('tableau')} className={activeTab === 'tableau' ? styles.active : ''}>Tableau</button>
                         </div>
                         <div className={styles.projectsWrapper}>

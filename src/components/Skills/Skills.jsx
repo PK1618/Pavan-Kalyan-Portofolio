@@ -14,19 +14,19 @@ function Skills() {
                 <section id="skills" className={`${styles.container} sectionContainer`}>
                         <h1 className="sectionTitle">SKILLS</h1>
                         <div className={styles.skillList}>
-                                <SkillsList src={checkMark} skill='Java' />
-                                <SkillsList src={checkMark} skill='Python' />
-                                <SkillsList src={checkMark} skill='SQL' />
-                                <SkillsList src={checkMark} skill='HTML, JavaScript, CSS' />
-                        </div>
-                        <hr />
-                        <div className={styles.skillList}>
+                                <SkillsList src={checkMark} skill='HTML5' />
+                                <SkillsList src={checkMark} skill='CSS' />
+                                <SkillsList src={checkMark} skill='JavaScript' />
                                 <SkillsList src={checkMark} skill='React' />
                                 <SkillsList src={checkMark} skill='Redux' />
-                                <SkillsList src={checkMark} skill='PostgreSQL' />
+                                <SkillsList src={checkMark} skill='ExpressJs' />
+                                <SkillsList src={checkMark} skill='NodeJs' />
+                                <SkillsList src={checkMark} skill='MongoDB' />
                         </div>
                         <hr />
                         <div className={styles.skillList}>
+                                <SkillsList src={checkMark} skill='Core Java' />
+                                <SkillsList src={checkMark} skill='Python' />
                                 <SkillsList src={checkMark} skill='Tensorflow' />
                                 <SkillsList src={checkMark} skill='Keras' />
                                 <SkillsList src={checkMark} skill='scikit-learn' />
@@ -38,11 +38,13 @@ function Skills() {
                         </div>
                         <hr />
                         <div className={styles.skillList}>
+                                <SkillsList src={checkMark} skill='VS Code' />
                                 <SkillsList src={checkMark} skill='Jupyter Notebook' />
                                 <SkillsList src={checkMark} skill='Excel' />
                                 <SkillsList src={checkMark} skill='Google Colab' />
-                                <SkillsList src={checkMark} skill='PowerBI' />
+                                <SkillsList src={checkMark} skill='Tableau' />
                                 <SkillsList src={checkMark} skill='Overleaf' />
+                                <SkillsList src={checkMark} skill='SQL Management Studio' />
                         </div>
                         <hr />
                         <div className={styles.skillList}>
