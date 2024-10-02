@@ -8,7 +8,7 @@ import githubIconLight from '../../assets/github-light.svg';
 import githubIconDark from '../../assets/github-dark.svg';
 import linkedInIconLight from '../../assets/linkedin-light.svg';
 import linkedInIconDark from '../../assets/linkedin-dark.svg';
-import CV from '../../assets/Pavan_KalyanResume.pdf';
+import CV from '../../assets/SatyaPavanKalyanDEV.pdf';
 import { useTheme } from '../../common/ThemeContext';
 
 function PK() {
@@ -36,7 +36,7 @@ function PK() {
                                         <a href="https://github.com/PK1618" target='_blank'>
                                                 <img src={githubIcon} alt="Github Icon" />
                                         </a>
-                                        <a href="https://www.linkedin.com/in/pavan-kalyan-9761231a1/" target='_blank'>
+                                        <a href="https://www.linkedin.com/in/satya-pavan-kalyan-gude-9761231a1/" target='_blank'>
                                                 <img src={linkedInIcon} alt="LinkedIn Icon" />
                                         </a>
                                 </span>

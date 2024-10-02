@@ -93,14 +93,13 @@ p {
         width: 100%;
         max-width: 1200px;
         margin: 0 auto;
-        padding: 10px;
+        padding: 0 20px;
         box-sizing: border-box;
 }
 
 .sectionTitle {
         font-size: 32px;
         /* margin-bottom: 20px; */
-        padding: 30px;
         text-align: center;
         width: 100%;
 }
