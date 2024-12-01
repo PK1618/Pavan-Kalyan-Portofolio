@@ -8,7 +8,7 @@ import githubIconLight from '../../assets/github-light.svg';
 import githubIconDark from '../../assets/github-dark.svg';
 import linkedInIconLight from '../../assets/linkedin-light.svg';
 import linkedInIconDark from '../../assets/linkedin-dark.svg';
-import CV from '../../assets/SatyaPavanKalyanDEV.pdf';
+import CV from '../../assets/PavanKalyanGude_Dev_Resume.pdf';
 import { useTheme } from '../../common/ThemeContext';
 
 function PK() {
