@@ -10,9 +10,10 @@ import Titanic from '../../assets/titanicImg.jpg'
 import HeartStroke from '../../assets/heartStroke.jpg'
 import ProjectCard from '../../common/ProjectCard'
 import AiImageGen from '../../assets/AiImage.webp'
+import UniversityTalks from '../../assets/University_talks_logo.webp'
 
 const projectData = {
-        frontend: [
+        FullStack: [
                 {
                         src: BurgerBuilder,
                         link: "https://react-my-burger-ec04f.web.app/",
@@ -28,6 +29,14 @@ const projectData = {
                         h3: 'Generate your thoughts and share with community',
                         p: 'Do fun work',
                         hoverText: 'Experience the power of AI with our image generator, built using React, Express, Node.js, TailwindCSS, MongoDB, and OpenAI’s API, seamlessly integrating CORS and Cloudinary for dynamic creativity.'
+                },
+                {
+                        src: UniversityTalks,
+                        link: "https://universitytalks.netlify.app/",
+                        alt: 'UniversityTalks',
+                        h3: 'Connect, Collaborate, Communicate – All in One Place.',
+                        p: 'Stay Connected',
+                        hoverText: 'University Talks is a collaborative chat platform for seamless communication through channels and direct messages, featuring profile management, emoji integration, and GIF support.'
                 }
         ],
         mlDl: [
@@ -88,7 +97,7 @@ const projectData = {
 
 function Projects() {
 
-        const [activeTab, setActiveTab] = useState('frontend')
+        const [activeTab, setActiveTab] = useState('FullStack')
         const scrollContainerRef = useRef(null)
 
         const scroll = (direction) => {
@@ -108,7 +117,7 @@ function Projects() {
                 <section id='projects' className={`${styles.container} sectionContainer`}>
                         <h1>PROJECTS</h1>
                         <div className={styles.tabs}>
-                                <button onClick={() => setActiveTab('frontend')} className={activeTab === 'frontend' ? styles.active : ''}>Frontend</button>
+                                <button onClick={() => setActiveTab('FullStack')} className={activeTab === 'FullStack' ? styles.active : ''}>Full Stack</button>
                                 <button onClick={() => setActiveTab('mlDl')} className={activeTab === 'mlDl' ? styles.active : ''}>ML/DL</button>
                                 <button onClick={() => setActiveTab('tableau')} className={activeTab === 'tableau' ? styles.active : ''}>Tableau</button>
                         </div>
